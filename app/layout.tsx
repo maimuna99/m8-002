@@ -1,3 +1,7 @@
+import Link  from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+
 import './globals.css'
 
 export const metadata = {
@@ -10,9 +14,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const router = useRouter()
+  const { slug } = router.query // the "slug" variable contains the slug from the URL
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <nav className='navigation'>
+          <Link href='/'>Home</Link>
+          <Link href='/blog'>Blog</Link>
+        </nav>
+        <h1>Post: {slug}</h1>
+        {children}
+       <Image src={"/image3.png"} alt={'image'} width={100} height={100}/>
+        </body>
     </html>
   )
 }
