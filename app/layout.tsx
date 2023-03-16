@@ -17,6 +17,7 @@ export default function RootLayout({
   const router = useRouter()
   const { slug } = router.query // the "slug" variable contains the slug from the URL
   return (
+    
     <html lang="en">
       <body>
         <nav className='navigation'>
