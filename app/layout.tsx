@@ -1,6 +1,6 @@
 import Link  from 'next/link'
 import Image from 'next/image'
-
+import Header from './blog/components/Header'
 
 
 import './globals.css'
@@ -22,10 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
 
-        <nav className='navigation'>
-          <Link href='/'>Home</Link>
-          <Link href='/blog'>Blog</Link>
-        </nav>
+        <Header/>
         <Image src={"/image3.png"} alt={'image'} width={100} height={100}/>
         {children}
        
