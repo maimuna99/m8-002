@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import "./globals.css";
+import Header from "./blog/components/Header";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <Image src={"/image3.png"} alt={"image"} width={100} height={100} />
         {children}
       </body>
