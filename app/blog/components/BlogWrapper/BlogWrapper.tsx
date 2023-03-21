@@ -1,11 +1,13 @@
-"use client"
-import {useRouter} from 'next/navigation'
+"use client";
+import { useRouter } from "next/navigation";
 const BlogWrapper = () => {
-     // Get the router object
+  // Get the router object
   const router = useRouter();
   // Navigate with router.push()
-  return <button onClick={(e) => router.push("/")}>Home</button>;
-   
-}
+  return (
+    // <button onClick={(e) => router.push("/")}>Home</button>
+    <div> Blog Page</div>
+  );
+};
 
 export default BlogWrapper;
